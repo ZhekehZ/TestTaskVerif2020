@@ -1,0 +1,12 @@
+language: cpp
+dist: bionic
+compiler:
+- clang
+- gcc
+os:
+- linux
+script:
+- g++ -std=c++11 -o test1 -pthread tests.cpp
+- ./test1
+- gcc -std=c11 -o test2 -pthread genmc.c
+- ./test2
